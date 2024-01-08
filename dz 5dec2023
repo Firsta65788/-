@@ -1,0 +1,16 @@
+a = []
+b = 0
+c = 1
+print("Введи построчно числа для сортировки пузырьком, в конце нужно ввести 0!")
+while c != 0:
+    c = float(input())
+    if c % 1 == 0 and c > 0:
+        a.append(int(c))
+        b += 1
+    else:
+        print("Вообще-то ненатуральные числа не сортируются!")
+for d in range(b-1):
+    for e in range(b-d-1):
+        if a[e] > a[e+1]:
+            a[e], a[e+1] = a[e+1], a[e]
+print(a)
