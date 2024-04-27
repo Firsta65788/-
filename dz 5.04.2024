@@ -1,0 +1,7 @@
+def p(list_with_str_and_other):
+    list_only_with_str = []
+    for el in list_with_str_and_other:
+        if type(el) is str:
+            list_only_with_str.append(el)
+    list_only_with_str.sort(key=len)
+    return list_only_with_str
